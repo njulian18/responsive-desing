@@ -1,0 +1,114 @@
+:root{
+    --color-header:#30343F;
+    --color-nav:#294936;
+    --color-section:#3E6259;
+    --color-aside:#5B8266;
+    --color-footer:#30343F;
+    --color-white:#fff;
+    --color-black:#000;
+    --color-hover:#9FA0FF;
+}
+*{
+    margin:0;
+    padding:0;   
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    font-family: sans-serif;
+    color:var(--color-white);
+}
+
+ul{
+ list-style:none;
+}
+
+   ul li a{
+       text-decoration: none;
+   }
+header{
+ line-height:3.5;
+ text-align: center;
+ color: var(--color-white);
+ background-color: var(--color-header);
+}
+nav {
+    background-color: var(--color-nav);
+    line-height:2.5;
+    margin-bottom:solid 2px transparent;
+}
+nav ul li{
+    text-align: center;
+}
+nav ul li:hover{
+    background-color: var(--color-hover);
+}
+    nav .nav-item a{
+        color:  var(--color-white);    
+    }
+.main-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow:1;
+}
+section{ 
+    flex-grow:1;
+    background-color: var(--color-section);
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+aside{
+    flex-grow:1;
+    background-color: var(--color-aside);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{  
+    text-align:center;
+    background-color:var(--color-footer);
+}
+.btn-color {
+    text-decoration: none;
+    color: #20bf6b ;
+    background: #ffffff;
+    padding: 10px 25px;
+    border: 3px solid #20bf6b ;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    margin: 12px 0;
+    }
+.btn-color:hover {
+    color: #494949 ;
+    border-radius: 50px;
+    border-color: #494949 ;
+    }
+@media screen and (min-width:768px){
+    .nav-item{
+     display: flex;
+    }
+    .nav-item li{
+     flex-grow:1;   
+    }
+
+}
+
+@media screen and (min-width:1024px){
+    .main-container{
+        display:flex;
+        flex-direction:row;
+    }
+    section{
+        flex-basis:60%;
+    } 
+
+    aside{
+        flex-basis:40%;
+    }
+
+}
